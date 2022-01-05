@@ -1,0 +1,6 @@
+:root {
+    --app-bg: #242933;
+    --boxshadow: 8px 8px 20px 0 rgba(18, 21, 26, .6), -8px -8px 20px 0 rgba(54, 62, 77, .5)
+    , inset 0 4px 20px 0 rgba(36, 41, 51, .5);
+    --border:2px solid #000;
+}

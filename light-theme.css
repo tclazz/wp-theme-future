@@ -1,0 +1,5 @@
+:root {
+    --app-bg: #eff2f8;
+    --boxshadow: 8px 8px 20px 0 rgba(55, 99, 170, .1), -8px -8px 20px 0 #fff;
+    --border:2px solid #fff;
+}

@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Title</title>
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/light-theme.css" rel="stylesheet" type="text/css">
     <style type="text/css">
-        .content{
+        body {
+            background-color: var(--app-bg);
+        }
+
+        .content {
             width: 100%;
             min-height: 60vh;
             color: var(--bs-tea);
         }
-        .webContainer{
+
+        .webContainer {
             display: flex;
             width: 100%;
             min-height: 90vh;
@@ -20,16 +26,32 @@
             align-items: flex-start;
             justify-content: flex-start;
         }
-        .contentWrapper{
+
+        .contentWrapper {
             width: 100%;
             flex: 1;
         }
-        .footerWrapper{
+
+        .footerWrapper {
             width: 100%;
+        }
+
+        .tclazz-panel {
+            min-height: 160px;
+            background-color: var(--app-bg);
+            background-size: 340px auto, auto;
+            background-position: 100% 0;
+            background-repeat: no-repeat;
+            border: var(--border);
+            box-shadow: var(--boxshadow);
+            border-radius: 4px;
+            padding: 24px;
+            box-sizing: border-box;
+            position: relative;
         }
     </style>
 </head>
-<body style="padding-top: 60px">
+<body style="padding-top: 65px">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-lg">
         <a class="navbar-brand" href="#">
@@ -58,8 +80,14 @@
         <div class="container-lg">
             <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1 g-3">
                 <div class="col">
+                    <!--panel demo-->
+                    <div class="tclazz-panel">
+                        <span>panel</span>
+                    </div>
+                </div>
+                <div class="col">
                     <div class="content text-danger text-center" style="display: flex;
-            flex-direction: row;align-items: center;justify-content: center">
+                        flex-direction: row;align-items: center;justify-content: center">
                         this site is building...
                     </div>
                 </div>
@@ -70,7 +98,8 @@
         <div class="container-fluid text-center">
             © 2018-2021 CoreCmd All Rights Reserved.
             <a href="http://www.miitbeian.gov.cn" class="reborn-footer-url" target="_blank">京ICP备18063315号-2</a>
-            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=52038202001416" class="reborn-footer-url" target="_blank">贵公网安备 52038202001416号</a>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=52038202001416"
+               class="reborn-footer-url" target="_blank">贵公网安备 52038202001416号</a>
         </div>
     </div>
 </div>
