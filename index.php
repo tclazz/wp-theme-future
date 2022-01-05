@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Title</title>
+    <title><?php bloginfo('name');?></title>
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/light-theme.css" rel="stylesheet" type="text/css">
+    <link href="<?php bloginfo('template_url'); ?>/tclazz-framework/css/light-theme.css" rel="stylesheet" type="text/css">
     <style type="text/css">
         body {
             background-color: var(--app-bg);
