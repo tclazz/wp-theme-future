@@ -222,7 +222,7 @@
     </style>
 </head>
 <body style="padding-top: 65px">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);">
     <div class="container-lg">
         <a class="navbar-brand" href="#">
             <img src="https://v5.bootcss.com/docs/5.1/assets/brand/bootstrap-logo.svg" alt=""
