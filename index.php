@@ -131,6 +131,94 @@
             border: 2px solid #fff;
             box-shadow: 8px 8px 20px 0 rgba(55,99,170,.1), -8px -8px 20px 0 #fff;
         }
+        .rank-wrapper{
+            width: 100%;
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: flex-start;
+        }
+        .rank-panels{
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-right: 15px;
+        }
+        .rank-panels .rank-panel:not(:nth-child(1)){
+            margin-top: 10px;
+        }
+        .rank-panel{
+            background: linear-gradient(180deg, #f5f7f9 0, #fff);
+            border: 2px solid #fff;
+            box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
+            border-radius: 6px;
+            box-sizing: border-box;
+            min-height: 40px;
+            padding: 8px;
+            vertical-align: top;
+            width: 100%;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
+            cursor: pointer;
+        }
+        .rank-panel-order{
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 700;
+            margin-right: 10px;
+            color: #0d6efd;
+        }
+        .rank-panel-title{
+            width: 100%;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 14px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            color: rgba(0,0,0,.65);
+        }
+        .rank-panel:hover .rank-panel-title{
+            color: #0d6efd;
+        }
+        .rank-panel-desc{
+            color: rgba(0,0,0,.45);
+            font-size: 12px;
+            line-height: 12px;
+        }
+        .rank-links{
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .rank-links :not(:nth-child(1)){
+            margin-top: 10px;
+        }
+        .rank-link{
+            width: 100%;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 14px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            color: rgba(0,0,0,.65);
+            cursor: pointer;
+        }
+        .rank-link:hover{
+            color: #0d6efd;
+        }
+        .rank-link-order{
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body style="padding-top: 65px">
@@ -161,7 +249,75 @@
     <div class="contentWrapper">
         <div class="container-lg">
             <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1 g-3">
-            <div class="col">
+            <div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="rank-wrapper">
+                        <div class="rank-panels">
+                            <a class="rank-panel">
+                                <i class="rank-panel-order">01</i>
+                                <div class="rank-panel-metas">
+                                    <span class="rank-panel-title">Link Title</span>
+                                    <div class="rank-panel-desc">
+                                        <span>this is link desc</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="rank-panel">
+                                <i class="rank-panel-order">02</i>
+                                <div class="rank-panel-metas">
+                                    <span class="rank-panel-title">Link Title</span>
+                                    <div class="rank-panel-desc">
+                                        <span>this is link desc</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="rank-panel">
+                                <i class="rank-panel-order">03</i>
+                                <div class="rank-panel-metas">
+                                    <span class="rank-panel-title">Link Title</span>
+                                    <div class="rank-panel-desc">
+                                        <span>this is link desc</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="rank-links">
+                            <a class="rank-link">
+                                <span class="rank-link-order">4</span>
+                                This is Link Text...
+                            </a>
+                            <a class="rank-link">
+                                <span class="rank-link-order">5</span>
+                                This is Link Text...
+                            </a>
+                            <a class="rank-link">
+                                <span class="rank-link-order">6</span>
+                                This is Link Text...
+                            </a>
+                            <a class="rank-link">
+                                <span class="rank-link-order">7</span>
+                                This is Link Text...
+                            </a>
+                            <a class="rank-link">
+                                <span class="rank-link-order">8</span>
+                                This is Link Text...
+                            </a>
+                            <a class="rank-link">
+                                <span class="rank-link-order">9</span>
+                                This is Link Text...
+                            </a>
+                            <a class="rank-link">
+                                <span class="rank-link-order">10</span>
+                                This is Link Text...
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="tclazz-panel">
+                        <span>panel</span>
+                    </div>
+                </div>
+                <div class="col">
                     <div class="swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
