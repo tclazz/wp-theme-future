@@ -7,6 +7,14 @@
     <title><?php bloginfo('name');?></title>
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/7.4.0/swiper-bundle.min.css" rel="stylesheet">
+    <!--idea暗黑主题使用-->
+    <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.3.1/styles/base16/darcula.min.css" rel="stylesheet">
+    <!--亮白主题使用-->
+    <!--<link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.3.1/styles/idea.min.css" rel="stylesheet">-->
+    <!--默认暗黑-->
+    <!--<link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.3.1/styles/base16/default-dark.min.css" rel="stylesheet">-->
+    <!--默认亮白-->
+    <!--<link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.3.1/styles/base16/default-light.min.css" rel="stylesheet">-->
     <link href="<?php bloginfo('template_url'); ?>/tclazz-framework/css/light-theme.css" rel="stylesheet" type="text/css">
     <style type="text/css">
          body {
@@ -249,6 +257,21 @@
     <div class="contentWrapper">
         <div class="container-lg">
             <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1 g-3">
+            <div class="col">
+                    <pre>
+                        <code class="lang-java">
+                            /**
+                              * @author tclazz
+                              * @version 1.0
+                              * @apiNote 代码高亮测试
+                              * @since 2022/1/7
+                            */
+                            public static void main (String []args){
+                                System.out.println("Hello World！");
+                            }
+                        </code>
+                    </pre>
+                </div>
             <div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                     <div class="rank-wrapper">
                         <div class="rank-panels">
@@ -436,7 +459,12 @@
     $(document).ready(function () {
         initBootTab();
         initSlider();
+        initHighlightjs();
     });
+
+    function initHighlightjs() {
+        hljs.initHighlightingOnLoad();
+    }
 
     function initBootTab() {
         var firstTabEl = document.querySelector('#myTab li:last-child a')
