@@ -455,6 +455,7 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/7.4.0/swiper-bundle.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 <script>
     $(document).ready(function () {
         initBootTab();
