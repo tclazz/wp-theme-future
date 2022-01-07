@@ -161,6 +161,60 @@
     <div class="contentWrapper">
         <div class="container-lg">
             <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1 g-3">
+            <div class="col">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="tclazz-panel">
+                                    Slide 1
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tclazz-panel">
+                                    Slide 2
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tclazz-panel">
+                                    Slide 3
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tclazz-panel">
+                                    Slide 4
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tclazz-panel">
+                                    Slide 5
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tclazz-panel">
+                                    Slide 6
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tclazz-panel">
+                                    Slide 7
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tclazz-panel">
+                                    Slide 8
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tclazz-panel">
+                                    Slide 9
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 如果需要导航按钮 -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
                 <div class="col">
                     <ul class="nav tclazz-nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
