@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title><?php bloginfo('name');?></title>
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/7.4.0/swiper-bundle.min.css" rel="stylesheet">
     <link href="<?php bloginfo('template_url'); ?>/tclazz-framework/css/light-theme.css" rel="stylesheet" type="text/css">
     <style type="text/css">
          body {
@@ -104,6 +105,32 @@
             display: inline-block;
             vertical-align: top;
         }
+        .swiper {
+            width: 100%;
+            height: 200px;
+        }
+        .swiper-slide .tclazz-panel{
+            margin-right: 15px;
+            box-shadow: none;
+        }
+        /*.swiper-button-prev {
+            right: 100%;
+            margin-right: 20px !important;
+        }
+        .swiper-button-next {
+            left: 100%;
+            margin-left: 20px !important;
+        }*/
+        .tpm-swiper__btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 0;
+            background-image: linear-gradient(
+                    0deg,#fff,#f3f5f8);
+            border: 2px solid #fff;
+            box-shadow: 8px 8px 20px 0 rgba(55,99,170,.1), -8px -8px 20px 0 #fff;
+        }
     </style>
 </head>
 <body style="padding-top: 65px">
@@ -194,5 +221,33 @@
 </div>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/Swiper/7.4.0/swiper-bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        initBootTab();
+        initSlider();
+    });
+
+    function initBootTab() {
+        var firstTabEl = document.querySelector('#myTab li:last-child a')
+        var firstTab = new bootstrap.Tab(firstTabEl)
+        firstTab.show()
+    }
+
+    function initSlider() {
+        var mySwiper = new Swiper('.swiper', {
+            direction: 'horizontal', // 垂直切换选项
+            loop: true, // 循环模式选项
+            autoplay:false,
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            slidesPerView : 3,
+            slidesPerGroup : 3,
+        })
+    }
+</script>
 </body>
 </html>
