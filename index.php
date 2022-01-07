@@ -49,6 +49,63 @@
             box-sizing: border-box;
             position: relative;
         }
+
+        .bg-tclazz-light {
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .bg-tclazz-dark {
+            background-color: rgba(33, 37, 41, 1);
+        }
+        .tclazz-nav-tabs{
+            font-size: 0;
+            margin-bottom: 5px;
+        }
+        .tclazz-nav-tabs .nav-item{
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 16px;
+        }
+        .tclazz-nav-item {
+            box-sizing: border-box;
+            border: 2px solid transparent;
+            background: #f3f5f8;
+            box-shadow: inset 8px 8px 20px 0 rgba(55, 99, 170, .11), inset -8px -8px 20px 0 #fff;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #3d485d;
+            line-height: 35px;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            padding: 5px 12px;
+            text-decoration: none;
+        }
+
+        .tclazz-nav-tabs .nav-item.show .tclazz-nav-item, .tclazz-nav-tabs .tclazz-nav-item.active {
+            border-color: #fff #fff transparent;
+            background: linear-gradient(180deg, #f4f6f8 0, #f5f7f9);
+            padding-bottom: 15px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            color: #0052d9;
+            cursor: default;
+            box-shadow: none;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tclazz-tab-pane {
+            background: linear-gradient(180deg, #f5f7f9 0, #fff);
+            border: 2px solid #fff;
+            box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
+            border-radius: 6px;
+            box-sizing: border-box;
+            min-height: 220px;
+            padding: 24px 8px 24px 30px;
+            display: inline-block;
+            vertical-align: top;
+        }
     </style>
 </head>
 <body style="padding-top: 65px">
@@ -79,6 +136,40 @@
     <div class="contentWrapper">
         <div class="container-lg">
             <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1 g-3">
+                <div class="col">
+                    <ul class="nav tclazz-nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a href="javascript:void(0)" class="tclazz-nav-item active" data-bs-toggle="tab" data-bs-target="#tab1"
+                               role="tab" aria-controls="home" aria-selected="true">标签1</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a href="javascript:void(0)" class="tclazz-nav-item" data-bs-toggle="tab" data-bs-target="#tab2"
+                               role="tab" aria-controls="profile" aria-selected="false">标签2</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a href="javascript:void(0)" class="tclazz-nav-item" data-bs-toggle="tab" data-bs-target="#tab3"
+                               role="tab" aria-controls="messages" aria-selected="false">标签3</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a href="javascript:void(0)" class="tclazz-nav-item" data-bs-toggle="tab" data-bs-target="#tab4"
+                               role="tab" aria-controls="settings" aria-selected="false">标签4</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tclazz-tab-pane tab-pane active" id="tab1" role="tabpanel"
+                             aria-labelledby="home-tab">内容1
+                        </div>
+                        <div class="tclazz-tab-pane tab-pane" id="tab2" role="tabpanel"
+                             aria-labelledby="profile-tab">内容2
+                        </div>
+                        <div class="tclazz-tab-pane tab-pane" id="tab3" role="tabpanel"
+                             aria-labelledby="messages-tab">内容3
+                        </div>
+                        <div class="tclazz-tab-pane tab-pane" id="tab4" role="tabpanel"
+                             aria-labelledby="settings-tab">内容4
+                        </div>
+                    </div>
+                </div>
                 <div class="col">
                     <!--panel demo-->
                     <div class="tclazz-panel">
