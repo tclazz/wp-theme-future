@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title><?php bloginfo('name'); ?></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/7.4.0/swiper-bundle.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <!--idea暗黑主题使用-->
     <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.3.1/styles/base16/darcula.min.css" rel="stylesheet">
     <!--亮白主题使用-->
@@ -269,9 +269,68 @@
             --swiper-navigation-color: #00ff33;/* 单独设置按钮颜色 */
             --swiper-navigation-size: 40px;/* 设置按钮大小 */
         }
+        /*******************Preloader********************/
+        .preloader {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            position: fixed;
+            z-index: 99999;
+            background: #ffffff;
+        }
+
+        .lds-ripple {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            position: absolute;
+            top: calc(50% - 3.5px);
+            left: calc(50% - 3.5px);
+        }
+        .lds-ripple .lds-pos {
+            position: absolute;
+            border: 2px solid #0d6efd;
+            opacity: 1;
+            border-radius: 50%;
+            animation: lds-ripple 1s cubic-bezier(0, 0.1, 0.5, 1) infinite;
+        }
+        .lds-ripple .lds-pos:nth-child(2)
+        {
+            animation-delay: -0.5s;
+        }
+
+        @keyframes lds-ripple {
+            0% {
+                top: 28px;
+                left: 28px;
+                width: 0;
+                height: 0;
+                opacity: 0;
+            }
+            5% {
+                top: 28px;
+                left: 28px;
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+            100% {
+                top: -1px;
+                left: -1px;
+                width: 58px;
+                height: 58px;
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body style="padding-top: 65px">
+<div id="page-loading" class="preloader">
+    <div class="lds-ripple">
+        <div class="lds-pos"></div>
+        <div class="lds-pos"></div>
+    </div>
+</div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"
      style="box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);">
     <div class="container-lg">
@@ -507,6 +566,8 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 <script>
     $(document).ready(function () {
+        //取消加载
+        $('#page-loading').fadeOut();
         initBootTab();
         initSlider();
         initHighlightjs();
