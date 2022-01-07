@@ -8,7 +8,7 @@
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php bloginfo('template_url'); ?>/tclazz-framework/css/light-theme.css" rel="stylesheet" type="text/css">
     <style type="text/css">
-        body {
+         body {
             background-color: var(--app-bg);
         }
 
@@ -38,14 +38,12 @@
 
         .tclazz-panel {
             min-height: 160px;
-            background-color: var(--app-bg);
-            background-size: 340px auto, auto;
+            background: linear-gradient(180deg, #f5f7f9 0, #fff);
             background-position: 100% 0;
-            background-repeat: no-repeat;
             border: var(--border);
             box-shadow: var(--boxshadow);
             border-radius: 4px;
-            padding: 24px;
+            padding: 16px;
             box-sizing: border-box;
             position: relative;
         }
@@ -102,7 +100,7 @@
             border-radius: 6px;
             box-sizing: border-box;
             min-height: 220px;
-            padding: 24px 8px 24px 30px;
+            padding: 16px;
             display: inline-block;
             vertical-align: top;
         }
