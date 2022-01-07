@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title><?php bloginfo('name');?></title>
+    <title><?php bloginfo('name'); ?></title>
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/7.4.0/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <!--idea暗黑主题使用-->
     <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.3.1/styles/base16/darcula.min.css" rel="stylesheet">
     <!--亮白主题使用-->
@@ -15,9 +16,10 @@
     <!--<link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.3.1/styles/base16/default-dark.min.css" rel="stylesheet">-->
     <!--默认亮白-->
     <!--<link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.3.1/styles/base16/default-light.min.css" rel="stylesheet">-->
-    <link href="<?php bloginfo('template_url'); ?>/tclazz-framework/css/light-theme.css" rel="stylesheet" type="text/css">
+    <link href="<?php bloginfo('template_url'); ?>/tclazz-framework/css/light-theme.css" rel="stylesheet"
+          type="text/css">
     <style type="text/css">
-         body {
+        body {
             background-color: var(--app-bg);
         }
 
@@ -64,15 +66,18 @@
         .bg-tclazz-dark {
             background-color: rgba(33, 37, 41, 1);
         }
-        .tclazz-nav-tabs{
+
+        .tclazz-nav-tabs {
             font-size: 0;
             margin-bottom: 5px;
         }
-        .tclazz-nav-tabs .nav-item{
+
+        .tclazz-nav-tabs .nav-item {
             display: inline-block;
             vertical-align: top;
             margin-right: 16px;
         }
+
         .tclazz-nav-item {
             box-sizing: border-box;
             border: 2px solid transparent;
@@ -113,33 +118,53 @@
             display: inline-block;
             vertical-align: top;
         }
+        .swiperContainer{
+            width: 100%;
+            position: relative;
+        }
         .swiper {
             width: 100%;
-            height: 200px;
+            height: 120px;
         }
-        .swiper-slide .tclazz-panel{
-            margin-right: 15px;
+
+        .swiper-slide .tclazz-panel {
             box-shadow: none;
+            height: 100%;
         }
-        /*.swiper-button-prev {
-            right: 100%;
-            margin-right: 20px !important;
+
+        .swiper-button-next:after, .swiper-button-prev:after {
+            display: none;
         }
-        .swiper-button-next {
-            left: 100%;
-            margin-left: 20px !important;
-        }*/
-        .tpm-swiper__btn {
+
+        .swiper-button-next, .swiper-button-prev{
+            font-size: 14px;
+            letter-spacing: 0;
+            text-transform: none;
+            font-variant: initial;
+            line-height: 1;
+            background-image: linear-gradient(135deg,#dbe2e9,#fff);
+            border: 2px solid #fff;
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            font-size: 0;
-            background-image: linear-gradient(
-                    0deg,#fff,#f3f5f8);
-            border: 2px solid #fff;
-            box-shadow: 8px 8px 20px 0 rgba(55,99,170,.1), -8px -8px 20px 0 #fff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 2px 2px 4px 0 rgba(0,0,0,.16);
+            color: #000;
         }
-        .rank-wrapper{
+        .swiper-button-next{
+            margin-right: -20px;
+        }
+        .swiper-button-prev{
+            margin-left: -20px;
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover{
+            color: #0d6efd;
+        }
+        .rank-wrapper {
             width: 100%;
             display: flex;
             position: relative;
@@ -147,7 +172,8 @@
             align-items: stretch;
             justify-content: flex-start;
         }
-        .rank-panels{
+
+        .rank-panels {
             flex: 1;
             display: flex;
             align-items: flex-start;
@@ -155,10 +181,12 @@
             flex-direction: column;
             margin-right: 15px;
         }
-        .rank-panels .rank-panel:not(:nth-child(1)){
+
+        .rank-panels .rank-panel:not(:nth-child(1)) {
             margin-top: 10px;
         }
-        .rank-panel{
+
+        .rank-panel {
             background: linear-gradient(180deg, #f5f7f9 0, #fff);
             border: 2px solid #fff;
             box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
@@ -175,14 +203,16 @@
             flex-direction: row;
             cursor: pointer;
         }
-        .rank-panel-order{
+
+        .rank-panel-order {
             font-size: 16px;
             line-height: 16px;
             font-weight: 700;
             margin-right: 10px;
             color: #0d6efd;
         }
-        .rank-panel-title{
+
+        .rank-panel-title {
             width: 100%;
             text-decoration: none;
             font-size: 14px;
@@ -190,27 +220,32 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-            color: rgba(0,0,0,.65);
+            color: rgba(0, 0, 0, .65);
         }
-        .rank-panel:hover .rank-panel-title{
+
+        .rank-panel:hover .rank-panel-title {
             color: #0d6efd;
         }
-        .rank-panel-desc{
-            color: rgba(0,0,0,.45);
+
+        .rank-panel-desc {
+            color: rgba(0, 0, 0, .45);
             font-size: 12px;
             line-height: 12px;
         }
-        .rank-links{
+
+        .rank-links {
             flex: 1;
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
             flex-direction: column;
         }
-        .rank-links :not(:nth-child(1)){
+
+        .rank-links :not(:nth-child(1)) {
             margin-top: 10px;
         }
-        .rank-link{
+
+        .rank-link {
             width: 100%;
             text-decoration: none;
             font-size: 14px;
@@ -218,19 +253,27 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-            color: rgba(0,0,0,.65);
+            color: rgba(0, 0, 0, .65);
             cursor: pointer;
         }
-        .rank-link:hover{
+
+        .rank-link:hover {
             color: #0d6efd;
         }
-        .rank-link-order{
+
+        .rank-link-order {
             margin-right: 10px;
+        }
+        .swiper{
+            --swiper-theme-color: #ff6600;/* 设置Swiper风格 */
+            --swiper-navigation-color: #00ff33;/* 单独设置按钮颜色 */
+            --swiper-navigation-size: 40px;/* 设置按钮大小 */
         }
     </style>
 </head>
 <body style="padding-top: 65px">
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"
+     style="box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);">
     <div class="container-lg">
         <a class="navbar-brand" href="#">
             <img src="https://v5.bootcss.com/docs/5.1/assets/brand/bootstrap-logo.svg" alt=""
@@ -257,7 +300,7 @@
     <div class="contentWrapper">
         <div class="container-lg">
             <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1 g-3">
-            <div class="col">
+                <div class="col">
                     <pre>
                         <code class="lang-java">
                             /**
@@ -272,7 +315,7 @@
                         </code>
                     </pre>
                 </div>
-            <div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                     <div class="rank-wrapper">
                         <div class="rank-panels">
                             <a class="rank-panel">
@@ -341,75 +384,81 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="tclazz-panel">
-                                    Slide 1
+                    <div class="swiperContainer">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="tclazz-panel">
+                                        Slide 1
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tclazz-panel">
-                                    Slide 2
+                                <div class="swiper-slide">
+                                    <div class="tclazz-panel">
+                                        Slide 2
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tclazz-panel">
-                                    Slide 3
+                                <div class="swiper-slide">
+                                    <div class="tclazz-panel">
+                                        Slide 3
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tclazz-panel">
-                                    Slide 4
+                                <div class="swiper-slide">
+                                    <div class="tclazz-panel">
+                                        Slide 4
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tclazz-panel">
-                                    Slide 5
+                                <div class="swiper-slide">
+                                    <div class="tclazz-panel">
+                                        Slide 5
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tclazz-panel">
-                                    Slide 6
+                                <div class="swiper-slide">
+                                    <div class="tclazz-panel">
+                                        Slide 6
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tclazz-panel">
-                                    Slide 7
+                                <div class="swiper-slide">
+                                    <div class="tclazz-panel">
+                                        Slide 7
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tclazz-panel">
-                                    Slide 8
+                                <div class="swiper-slide">
+                                    <div class="tclazz-panel">
+                                        Slide 8
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tclazz-panel">
-                                    Slide 9
+                                <div class="swiper-slide">
+                                    <div class="tclazz-panel">
+                                        Slide 9
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!-- 如果需要导航按钮 -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"><i class="bi bi-chevron-left"></i></div>
+                        <div class="swiper-button-next"><i class="bi bi-chevron-right"></i></div>
                     </div>
                 </div>
                 <div class="col">
                     <ul class="nav tclazz-nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a href="javascript:void(0)" class="tclazz-nav-item active" data-bs-toggle="tab" data-bs-target="#tab1"
+                            <a href="javascript:void(0)" class="tclazz-nav-item active" data-bs-toggle="tab"
+                               data-bs-target="#tab1"
                                role="tab" aria-controls="home" aria-selected="true">标签1</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a href="javascript:void(0)" class="tclazz-nav-item" data-bs-toggle="tab" data-bs-target="#tab2"
+                            <a href="javascript:void(0)" class="tclazz-nav-item" data-bs-toggle="tab"
+                               data-bs-target="#tab2"
                                role="tab" aria-controls="profile" aria-selected="false">标签2</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a href="javascript:void(0)" class="tclazz-nav-item" data-bs-toggle="tab" data-bs-target="#tab3"
+                            <a href="javascript:void(0)" class="tclazz-nav-item" data-bs-toggle="tab"
+                               data-bs-target="#tab3"
                                role="tab" aria-controls="messages" aria-selected="false">标签3</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a href="javascript:void(0)" class="tclazz-nav-item" data-bs-toggle="tab" data-bs-target="#tab4"
+                            <a href="javascript:void(0)" class="tclazz-nav-item" data-bs-toggle="tab"
+                               data-bs-target="#tab4"
                                role="tab" aria-controls="settings" aria-selected="false">标签4</a>
                         </li>
                     </ul>
@@ -477,14 +526,16 @@
         var mySwiper = new Swiper('.swiper', {
             direction: 'horizontal', // 垂直切换选项
             loop: true, // 循环模式选项
-            autoplay:false,
+            autoplay: false,
             // 如果需要前进后退按钮
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            slidesPerView : 3,
-            slidesPerGroup : 3,
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            //间距
+            spaceBetween: 15,
         })
     }
 </script>
