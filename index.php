@@ -176,7 +176,6 @@
             position: relative;
         }
         .indexBanner:before {
-            /*background: url(https://cdn.jsdelivr.net/gh/lavender816/CDN@1.8/img/dot.jpg);*/
             content: '';
             position: absolute;
             top: 0;
