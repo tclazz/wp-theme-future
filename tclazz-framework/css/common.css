@@ -1,0 +1,21 @@
+.tclazz-panel {
+    min-height: 160px;
+    background: linear-gradient(180deg, #f5f7f9 0, #fff);
+    background-position: 100% 0;
+    border: var(--border);
+    box-shadow: var(--boxshadow);
+    border-radius: 4px;
+    padding: 16px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.normal-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    font-size: 12px;
+    line-height: 22px;
+    color: rgb(73, 87, 112);
+    white-space: nowrap;
+}

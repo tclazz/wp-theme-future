@@ -1,0 +1,51 @@
+.tclazz-nav-tabs {
+    font-size: 0;
+    margin-bottom: 5px;
+}
+
+.tclazz-nav-tabs .nav-item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 16px;
+}
+
+.tclazz-nav-item {
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    background: #f3f5f8;
+    box-shadow: inset 8px 8px 20px 0 rgba(55, 99, 170, .11), inset -8px -8px 20px 0 #fff;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #3d485d;
+    line-height: 35px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 12px;
+    text-decoration: none;
+}
+
+.tclazz-nav-tabs .nav-item.show .tclazz-nav-item, .tclazz-nav-tabs .tclazz-nav-item.active {
+    border-color: #fff #fff transparent;
+    background: linear-gradient(180deg, #f4f6f8 0, #f5f7f9);
+    padding-bottom: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color: #0052d9;
+    cursor: default;
+    box-shadow: none;
+    position: relative;
+    z-index: 2;
+}
+
+.tclazz-tab-pane {
+    background: linear-gradient(180deg, #f5f7f9 0, #fff);
+    border: 2px solid #fff;
+    box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
+    border-radius: 6px;
+    box-sizing: border-box;
+    min-height: 220px;
+    padding: 16px;
+    display: inline-block;
+    vertical-align: top;
+}
