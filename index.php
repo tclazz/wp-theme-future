@@ -488,9 +488,12 @@
         $(window).scroll(function(event){
             let winPos = $(window).scrollTop();
             if (winPos > 50){
-                $topNavbar.addClass('bg-dark');
+                $topNavbar.removeClass('navbar-dark');
+                $topNavbar.addClass('bg-light navbar-light');
             } else {
-                $topNavbar.removeClass('bg-dark');
+                $topNavbar.removeClass('bg-light');
+                $topNavbar.removeClass('navbar-light');
+                $topNavbar.addClass('navbar-dark');
             }
         });
     }
