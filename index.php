@@ -169,7 +169,7 @@
             flex-direction: column;
             align-content: center;
             justify-content: center;
-            /*background-image: url(https://tva4.sinaimg.cn/large/005BYqpgly1frn9f8pkaij31hc0u0x6p.jpg);*/
+            background-image: url(https://blogzine.webestica.com/assets/images/blog/16by9/04.jpg);
             background-size: cover;
             background-position: 50% 50%;
             background-repeat: no-repeat;
@@ -185,6 +185,10 @@
             right: 0;
             z-index: -4;
             background-attachment: fixed;
+        }
+        #webTopNavbar .nav-link{
+            font-weight: 700;
+            letter-spacing: .0625rem;
         }
     </style>
 </head>
@@ -210,6 +214,9 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="http://tclazz.com">home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="http://tclazz.com">otherLink</a>
                 </li>
             </ul>
             <form class="d-flex" style="height: 100%;min-width: 300px;">
