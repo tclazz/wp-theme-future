@@ -16,24 +16,193 @@
     <!--<link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.3.1/styles/base16/default-dark.min.css" rel="stylesheet">-->
     <!--默认亮白-->
     <!--<link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.3.1/styles/base16/default-light.min.css" rel="stylesheet">-->
-    <link href="<?php bloginfo('template_url'); ?>/tclazz-framework/css/light-theme.css" rel="stylesheet" type="text/css">
+    <link href="<?php bloginfo('template_url'); ?>/tclazz-framework/css/light-theme.css" rel="stylesheet"
+          type="text/css">
     <link href="<?php bloginfo('template_url'); ?>/style.css" rel="stylesheet" type="text/css">
+    <style>
+        .welcomeText {
+            /*是否转大写*/
+            /*text-transform: uppercase;*/
+            font-size: calc(8vmin + 8 * (100vw - 400px) / 400);
+            cursor: pointer;
+            position: relative;
+            z-index: 1000;
+            text-align: center;
+            color: #ffffff;
+            width: 100%;
+        }
+
+        .welcomeText:before {
+            left: -1px;
+            text-shadow: 5px 0 rgba(255, 0, 0, .7);
+            animation: welcomeText-loop-1 .8s ease-in-out infinite alternate-reverse;
+        }
+
+        .welcomeText:after {
+            left: 1px;
+            text-shadow: -5px 0 rgba(0, 0, 255, .7);
+            animation: welcomeText-loop-2 1s ease-in-out infinite alternate-reverse;
+        }
+
+        .welcomeText:after, .welcomeText:before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            clip: rect(0, 0, 0, 0);
+        }
+
+        @-webkit-keyframes welcomeText-loop-1 {
+            0% {
+                clip: rect(36px, 9999px, 9px, 0)
+            }
+
+            25% {
+                clip: rect(25px, 9999px, 99px, 0)
+            }
+
+            50% {
+                clip: rect(50px, 9999px, 102px, 0)
+            }
+
+            75% {
+                clip: rect(20px, 9999px, 92px, 0)
+            }
+
+            to {
+                clip: rect(100px, 9999px, 98px, 0)
+            }
+        }
+
+        @keyframes welcomeText-loop-1 {
+            0% {
+                clip: rect(36px, 9999px, 9px, 0)
+            }
+
+            25% {
+                clip: rect(25px, 9999px, 99px, 0)
+            }
+
+            50% {
+                clip: rect(50px, 9999px, 102px, 0)
+            }
+
+            75% {
+                clip: rect(20px, 9999px, 92px, 0)
+            }
+
+            to {
+                clip: rect(100px, 9999px, 98px, 0)
+            }
+        }
+
+        @-webkit-keyframes welcomeText-loop-2 {
+            0% {
+                top: -1px;
+                left: 1px;
+                clip: rect(65px, 9999px, 119px, 0)
+            }
+
+            25% {
+                top: -8px;
+                left: 2px;
+                clip: rect(79px, 9999px, 19px, 0)
+            }
+
+            50% {
+                top: -3px;
+                left: 2px;
+                clip: rect(68px, 9999px, 11px, 0)
+            }
+
+            75% {
+                top: 0;
+                left: -2px;
+                clip: rect(95px, 9999px, 53px, 0)
+            }
+
+            to {
+                top: -1px;
+                left: -4px;
+                clip: rect(31px, 9999px, 149px, 0)
+            }
+        }
+
+        @keyframes welcomeText-loop-2 {
+            0% {
+                top: -1px;
+                left: 1px;
+                clip: rect(65px, 9999px, 119px, 0)
+            }
+
+            25% {
+                top: -8px;
+                left: 2px;
+                clip: rect(79px, 9999px, 19px, 0)
+            }
+
+            50% {
+                top: -3px;
+                left: 2px;
+                clip: rect(68px, 9999px, 11px, 0)
+            }
+
+            75% {
+                top: 0;
+                left: -2px;
+                clip: rect(95px, 9999px, 53px, 0)
+            }
+
+            to {
+                top: -1px;
+                left: -4px;
+                clip: rect(31px, 9999px, 149px, 0)
+            }
+        }
+
+        .indexBanner {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            /*background-image: url(https://tva4.sinaimg.cn/large/005BYqpgly1frn9f8pkaij31hc0u0x6p.jpg);*/
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .indexBanner:before {
+            /*background: url(https://cdn.jsdelivr.net/gh/lavender816/CDN@1.8/img/dot.jpg);*/
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -4;
+            background-attachment: fixed;
+        }
+    </style>
 </head>
-<body style="padding-top: 65px">
+<body>
 <div id="page-loading" class="preloader">
     <div class="lds-ripple">
         <div class="lds-pos"></div>
         <div class="lds-pos"></div>
     </div>
 </div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"
-     style="box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);">
+<nav id="webTopNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container-lg">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#" style="outline: none">
             <img src="https://v5.bootcss.com/docs/5.1/assets/brand/bootstrap-logo.svg" alt=""
                  width="30" height="24" class="d-inline-block align-text-top mr-3">TClazz
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,8 +219,16 @@
         </div>
     </div>
 </nav>
-<div class="webContainer">
-    <div class="contentWrapper">
+<div class="indexBanner">
+    <div class="bannerContent">
+        <h4 class="welcomeText" data-text="Welcome to TClazz">Welcome to TClazz</h4>
+        <div class="welcomeMetas">
+           <!-- <a href="#webContainer" class="btn btn-primary">开始阅读</a>-->
+        </div>
+    </div>
+</div>
+<div id="webContainer" class="webContainer">
+    <div class="webContentWrapper">
         <div class="container-lg">
             <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1 g-3">
                 <div class="col">
@@ -246,7 +423,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="webFooter container-fluid">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -255,12 +432,16 @@
                             <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
                                 <div class="footer-main">
                                     <div class="userLinks">
-                                        <a class="footer-link-item" href="http://tclazz.com"><span style="font-size: 16px;color: #0d6efd;font-weight: 700">TClazz(T码)</span></a>
+                                        <a class="footer-link-item" href="http://tclazz.com"><span
+                                                    style="font-size: 16px;color: #0d6efd;font-weight: 700">TClazz(T码)</span></a>
                                         <a class="footer-link-item" href="http://www.tianshaojiao.com" target="_blank">个人博客</a>
-                                        <a class="footer-link-item" href="https://blog.csdn.net/MasterAjoe" target="_blank">CSDN博客</a>
+                                        <a class="footer-link-item" href="https://blog.csdn.net/MasterAjoe"
+                                           target="_blank">CSDN博客</a>
                                         <a class="footer-link-item" href="https://www.baidu.com" target="_blank">百度</a>
-                                        <a class="footer-link-item" href="https://console.qingcloud.com" target="_blank">青云·云服务提供商</a>
-                                        <a class="footer-link-item" href="http://www.tianshaojiao.com:2020/wenyi/i/love/you" target="_blank">可爱的女朋友</a>
+                                        <a class="footer-link-item" href="https://console.qingcloud.com"
+                                           target="_blank">青云·云服务提供商</a>
+                                        <a class="footer-link-item"
+                                           href="http://www.tianshaojiao.com:2020/wenyi/i/love/you" target="_blank">可爱的女朋友</a>
                                     </div>
                                     <span class="normal-text">Copyright © 2018-2022 CoreCmd. All Rights Reserved. T码版权所有</span><br>
                                     <div class="copyRights">
@@ -294,8 +475,19 @@
         initBootTab();
         initSlider();
         initHighlightjs();
+        initWebScrollListener();
     });
-
+    function initWebScrollListener() {
+        let $topNavbar = $('#webTopNavbar');
+        $(window).scroll(function(event){
+            let winPos = $(window).scrollTop();
+            if (winPos > 50){
+                $topNavbar.addClass('bg-dark');
+            } else {
+                $topNavbar.removeClass('bg-dark');
+            }
+        });
+    }
     function initHighlightjs() {
         hljs.initHighlightingOnLoad();
     }
@@ -310,7 +502,7 @@
         var mySwiper = new Swiper('.swiper', {
             direction: 'horizontal', // 垂直切换选项
             loop: true, // 循环模式选项
-            autoplay: true,
+            autoplay: false,
             // 如果需要前进后退按钮
             navigation: {
                 nextEl: '.swiper-button-next',

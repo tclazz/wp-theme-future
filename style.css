@@ -20,7 +20,7 @@ body {
     justify-content: flex-start;
 }
 
-.contentWrapper {
+.webContentWrapper {
     width: 100%;
     flex: 1;
 }
