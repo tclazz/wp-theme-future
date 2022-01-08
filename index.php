@@ -169,7 +169,7 @@
             flex-direction: column;
             align-content: center;
             justify-content: center;
-            background-image: url(https://blogzine.webestica.com/assets/images/blog/16by9/04.jpg);
+            background-image: url(https://tva4.sinaimg.cn/large/0075auPSly1fqb5xmdoa4j31jk0rzds0.jpg);
             background-size: cover;
             background-position: 50% 50%;
             background-repeat: no-repeat;
