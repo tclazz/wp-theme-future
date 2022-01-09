@@ -12,10 +12,15 @@ Tags: tclazz、future、modern
 @import "tclazz-framework/css/rankpanel.css";
 @import "tclazz-framework/css/swipper.css";
 @import "tclazz-framework/css/footer.css";
+@import "tclazz-framework/css/indexBanner.css";
 body {
     background-color: var(--app-bg);
 }
-
+#webTopNavbar .nav-link{
+    font-weight: 700;
+    letter-spacing: .0625rem;
+    transition: all .2s;
+}
 .webContainer {
     display: flex;
     width: 100%;
@@ -93,5 +98,8 @@ body {
         opacity: 0;
     }
 }
+
+
+
 
 
