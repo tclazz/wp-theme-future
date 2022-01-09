@@ -39,10 +39,12 @@
 
 .swiper-button-next {
     margin-right: -20px;
+    outline: none;
 }
 
 .swiper-button-prev {
     margin-left: -20px;
+    outline: none;
 }
 
 .swiper-button-next:hover, .swiper-button-prev:hover {
