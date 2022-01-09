@@ -1,4 +1,4 @@
-<?php get_header();?>
+<?php get_header(); ?>
 <div class="indexBanner">
     <div class="bannerContent">
         <h4 class="welcomeText" data-text="Welcome to TClazz">Welcome to TClazz</h4>
@@ -200,25 +200,48 @@
         </div>
     </div>
 </div>
-<?php get_footer();?>
+<?php get_footer(); ?>
 <script>
+    let mySwipper = {};
     $(document).ready(function () {
         initSlider();
+        initWindowWithListener();
     });
+
+    function initWindowWithListener() {
+        $(window).resize(function () {
+            if (mySwipper){
+                mySwipper.destroy(true,true);
+            }
+            initSlider();
+        });
+    }
+
     function initSlider() {
-        var mySwiper = new Swiper('.swiper', {
+        let windowWidth = $(window).width();
+        let slideCount = 3;
+        if (windowWidth < 768) {
+            slideCount = 1;
+        } else if (windowWidth === 768) {
+            slideCount = 2;
+        } else if (windowWidth > 768 && windowWidth < 1344) {
+            slideCount = 3;
+        } else {
+            slideCount = 4;
+        }
+        mySwipper = new Swiper('.swiper', {
             direction: 'horizontal', // 垂直切换选项
             loop: true, // 循环模式选项
-            autoplay: false,
+            autoplay: true,
             // 如果需要前进后退按钮
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            slidesPerView: 4,
-            slidesPerGroup: 4,
+            slidesPerView: slideCount,
             //间距
             spaceBetween: 15,
-        })
+        });
+
     }
 </script>
