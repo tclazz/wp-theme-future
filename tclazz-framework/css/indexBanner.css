@@ -3,8 +3,8 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     background-image: url(http://tclazz.com/wp-content/uploads/2022/01/indexBanner.jpg);
     background-size: cover;
     background-position: 50% 50%;
@@ -21,7 +21,20 @@
     z-index: -4;
     background-attachment: fixed;
 }
-
+.bannerContent{
+    flex: 1;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.scrollToWrapper{
+    color: #ffffff;
+    font-weight: 700;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
 .welcomeText {
     /*是否转大写*/
     /*text-transform: uppercase;*/
