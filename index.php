@@ -169,7 +169,7 @@
             flex-direction: column;
             align-content: center;
             justify-content: center;
-            background-image: url(https://tva4.sinaimg.cn/large/0075auPSly1fqb5xmdoa4j31jk0rzds0.jpg);
+            background-image: url(http://tclazz.com/wp-content/uploads/2022/01/indexBanner.jpg);
             background-size: cover;
             background-position: 50% 50%;
             background-repeat: no-repeat;
