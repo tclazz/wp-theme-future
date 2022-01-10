@@ -13,6 +13,12 @@
 </div>
 <div class="container-lg">
     <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1 g-3" style="margin-top: 3px">
+       <div class="col">
+                    <div class="p-all-search">
+                        <input tabindex="-1" class="c-search-input" placeholder="搜索产品名称" value="">
+                        <button class="c-search-btn">查询</button>
+                    </div>
+                </div>
         <div class="3">
             <div class="customTag">
                 <i class="pls-nav-tag">热门</i>
