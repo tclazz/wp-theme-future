@@ -210,6 +210,7 @@
 <?php get_footer(); ?>
 <script>
     let mySwipper = {};
+    let myCalendarChart = undefined;
     $(document).ready(function () {
         initSlider();
         initWindowWithListener();
