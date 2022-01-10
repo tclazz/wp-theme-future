@@ -14,7 +14,7 @@
 <div class="container-lg">
     <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1 g-3" style="margin-top: 3px">
         <div class="col">
-            <div id="calendarChart" style="width: 100%;height: 350px"></div>
+            <div id="calendarChart" style="width: 100%;height: 220px"></div>
         </div>
         <div class="col">
             <div class="swiperContainer">
