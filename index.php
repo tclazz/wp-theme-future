@@ -281,6 +281,12 @@
             return data;
         }
         option = {
+            title: {
+                top: 0,
+                left: 'center',
+                text: 'Posts Daily Count'
+            },
+            tooltip: {},
             visualMap: {
                 type: "piecewise",
                 show: false,
