@@ -295,10 +295,10 @@
                 //设置自定义范围区域的颜色！！！
                 pieces: [
                     // 不指定 max，表示 max 为无限大（Infinity）。
-                    { gte: 30, color: '#254e77' },
-                    { gte: 20, lte: 29, color: '#527ba0' },
-                    { gte: 10, lte: 19,  color: '#7fa8c9' },
-                    { lte: 9, color: '#acd5f2' }],
+                    { gte: 30, color: '#1e6823' },
+                    { gte: 20, lte: 29, color: '#44a340' },
+                    { gte: 10, lte: 19,  color: '#8cc665' },
+                    { lte: 9, color: '#d6e685' }],
             },
             calendar: {
                 top:30,
