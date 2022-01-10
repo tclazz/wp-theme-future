@@ -271,27 +271,59 @@
             var end = +echarts.number.parseDate(year + '-12-31');
             var dayTime = 3600 * 24 * 1000;
             var data = [];
-            for (var time = date; time <= end; time += dayTime) {
-                data.push([
-                    echarts.format.formatTime('yyyy-MM-dd', time),
-                    Math.floor(Math.random() * 10000)
-                ]);
-            }
+            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-01-01'),2]);
+            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-02-01'),10]);
+            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-03-01'),3]);
+            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-04-01'),8]);
+            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-04-15'),13]);
+            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-05-15'),25]);
+            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-06-15'),20]);
+            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-07-15'),3]);
+            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-08-15'),6]);
+            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-09-15'),18]);
+
             return data;
         }
         option = {
             visualMap: {
+                type: "piecewise",
                 show: false,
                 min: 0,
-                max: 10000
+                max: 10000,
+                //设置自定义范围区域的颜色！！！
+                pieces: [
+                    // 不指定 max，表示 max 为无限大（Infinity）。
+                    { gte: 30, color: '#254e77' },
+                    { gte: 20, lte: 29, color: '#527ba0' },
+                    { gte: 10, lte: 19,  color: '#7fa8c9' },
+                    { lte: 9, color: '#acd5f2' }],
             },
             calendar: {
-                range: ['2020','2022'],
+                top:30,
+                bottom:10,
+                left:35,
+                right:10,
+                cellSize: 20,
+                range: ['2022'],
                 //orient:'vertical',
                 splitLine: {
                     show: false
                 },
-                itemStyle: {}
+                itemStyle: {
+                    color:'#ededed',
+                    borderColor:'#ffffff',
+                },
+                dayLabel:{
+                    nameMap:['', '一', '', '三', '', '五', '']
+                },
+                monthLabel:{
+                    align:'left',
+                    position:'start',
+                    nameMap: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                },
+                yearLabel:{
+                    show:false
+                }
             },
             series: {
                 type: 'heatmap',
