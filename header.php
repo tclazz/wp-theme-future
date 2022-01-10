@@ -68,8 +68,12 @@
                 </li>
             </ul>
             <form class="d-flex" style="height: 100%;min-width: 300px;">
-                <input class="form-control me-2" type="search" placeholder="search blogs" aria-label="Search">
-                <button class="btn btn-outline-warning" type="button" style="white-space: nowrap">search</button>
+                <div class="tclazz-input-group">
+                    <input type="text" class="tclazzInput" placeholder="查找文章">
+                    <button class="tclazzInputBtn">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
             </form>
         </div>
     </div>

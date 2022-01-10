@@ -14,9 +14,11 @@
 <div class="container-lg">
     <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1 g-3" style="margin-top: 3px">
         <div class="col">
-            <div class="input-group mb-3">
+            <div class="tclazz-input-group">
                 <input type="text" class="tclazzInput" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                <button class="tclazzInputBtn">
+                    <i class="bi bi-search"></i>
+                </button>
             </div>
         </div>
         <div class="3">
