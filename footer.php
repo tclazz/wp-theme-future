@@ -44,6 +44,7 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/7.4.0/swiper-bundle.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
 <script>
     $(document).ready(function () {
         //取消加载
