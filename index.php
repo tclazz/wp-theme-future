@@ -13,6 +13,11 @@
 </div>
 <div class="container-lg">
     <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1 g-3" style="margin-top: 3px">
+        <div class="3">
+            <div class="customTag">
+                <i class="pls-nav-tag">热门</i>
+            </div>
+        </div>
         <div class="col">
             <div id="calendarChart" style="width: 100%;height: 220px"></div>
         </div>

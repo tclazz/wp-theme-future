@@ -19,3 +19,28 @@
     color: rgb(73, 87, 112);
     white-space: nowrap;
 }
+.customTag .pls-nav-tag {
+            /*position: absolute;
+            right: -14px;
+            top: 8px;
+            margin-left: 0;*/
+        }
+        .pls-nav-tag {
+            box-sizing: border-box;
+            margin-left: 8px;
+            padding: 0 4px;
+            background: #fff;
+            border: 1px solid #f64041;
+            box-shadow: 2px 2px 4px 0 rgba(55,99,170,.31);
+            border-radius: 6px;
+            border-bottom-left-radius: 0;
+            position: relative;
+            top: -1px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #f64041;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 12px;
+        }
