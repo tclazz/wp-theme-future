@@ -274,7 +274,7 @@
             for (var time = date; time < end; time += dayTime) {
                 data.push([
                     echarts.format.formatTime('yyyy-MM-dd', time),
-                    Math.floor(Math.random() * 100)
+                    Math.floor(Math.random() * 30)
                 ]);
             }
 
