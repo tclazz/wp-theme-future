@@ -59,9 +59,9 @@
             let winPos = $(window).scrollTop();
             if (winPos > 50){
                 $topNavbar.removeClass('navbar-dark');
-                $topNavbar.addClass('bg-light navbar-light');
+                $topNavbar.addClass('bg-tclazz-light navbar-light');
             } else {
-                $topNavbar.removeClass('bg-light');
+                $topNavbar.removeClass('bg-tclazz-light');
                 $topNavbar.removeClass('navbar-light');
                 $topNavbar.addClass('navbar-dark');
             }

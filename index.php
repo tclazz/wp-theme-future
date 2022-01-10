@@ -174,7 +174,7 @@
             <div class="row row-cols-1 g-3" style="margin-top: 3px">
                 <div class="col">
                     <div class="tclazz-input-group">
-                        <input type="text" class="tclazzInput" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <input type="text" class="tclazzInput" placeholder="查找文章">
                         <button class="tclazzInputBtn">
                             <i class="bi bi-search"></i>
                         </button>
@@ -183,38 +183,30 @@
                 <div class="col">
                     <ul class="nav tclazz-nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a href="javascript:void(0)" class="tclazz-nav-item active" data-bs-toggle="tab"
+                            <a href="javascript:void(0)" class="tclazz-nav-item" data-bs-toggle="tab"
                                data-bs-target="#tab1"
-                               role="tab" aria-controls="home" aria-selected="true">Docker</a>
+                               role="tab" aria-controls="profile" aria-selected="false">最新发布</a>
                         </li>
                         <li class="nav-item" role="presentation">
                             <a href="javascript:void(0)" class="tclazz-nav-item" data-bs-toggle="tab"
                                data-bs-target="#tab2"
-                               role="tab" aria-controls="profile" aria-selected="false">前端开发</a>
+                               role="tab" aria-controls="profile" aria-selected="false">热评文章</a>
                         </li>
                         <li class="nav-item" role="presentation">
                             <a href="javascript:void(0)" class="tclazz-nav-item" data-bs-toggle="tab"
                                data-bs-target="#tab3"
-                               role="tab" aria-controls="messages" aria-selected="false">后端开发</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a href="javascript:void(0)" class="tclazz-nav-item" data-bs-toggle="tab"
-                               data-bs-target="#tab4"
-                               role="tab" aria-controls="settings" aria-selected="false">数据库</a>
+                               role="tab" aria-controls="messages" aria-selected="false">大家喜欢</a>
                         </li>
                     </ul>
                     <div class="tab-content">
-                        <div class="tclazz-tab-pane tab-pane active" id="tab1" role="tabpanel"
-                             aria-labelledby="home-tab">内容1
+                        <div class="tclazz-tab-pane tab-pane" id="tab1" role="tabpanel"
+                             aria-labelledby="profile-tab">内容1
                         </div>
                         <div class="tclazz-tab-pane tab-pane" id="tab2" role="tabpanel"
                              aria-labelledby="profile-tab">内容2
                         </div>
                         <div class="tclazz-tab-pane tab-pane" id="tab3" role="tabpanel"
                              aria-labelledby="messages-tab">内容3
-                        </div>
-                        <div class="tclazz-tab-pane tab-pane" id="tab4" role="tabpanel"
-                             aria-labelledby="settings-tab">内容4
                         </div>
                     </div>
                 </div>
