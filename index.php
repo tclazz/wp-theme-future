@@ -13,12 +13,12 @@
 </div>
 <div class="container-lg">
     <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1 g-3" style="margin-top: 3px">
-       <div class="col">
-                    <div class="p-all-search">
-                        <input tabindex="-1" class="c-search-input" placeholder="搜索产品名称" value="">
-                        <button class="c-search-btn">查询</button>
-                    </div>
-                </div>
+        <div class="col">
+            <div class="input-group mb-3">
+                <input type="text" class="tclazzInput" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+            </div>
+        </div>
         <div class="3">
             <div class="customTag">
                 <i class="pls-nav-tag">热门</i>
@@ -230,8 +230,8 @@
 
     function initWindowWithListener() {
         $(window).resize(function () {
-            if (mySwipper){
-                mySwipper.destroy(true,true);
+            if (mySwipper) {
+                mySwipper.destroy(true, true);
             }
             initSlider();
             resizeCalendarChart();
@@ -265,17 +265,20 @@
         });
 
     }
+
     function resizeCalendarChart() {
-        if (myCalendarChart){
+        if (myCalendarChart) {
             myCalendarChart.resize();
         } else {
             initCalendarChart();
         }
     }
+
     function initCalendarChart() {
         var chartDom = document.getElementById('calendarChart');
         myCalendarChart = echarts.init(chartDom);
         var option;
+
         function getVirtulData(year) {
             year = year || '2022';
             var date = +echarts.number.parseDate(year + '-01-01');
@@ -285,12 +288,13 @@
             for (var time = date; time < end; time += dayTime) {
                 data.push([
                     echarts.format.formatTime('yyyy-MM-dd', time),
-                    Math.floor(Math.random() * 30)
+                    Math.floor(Math.random() * 40)
                 ]);
             }
 
             return data;
         }
+
         option = {
             title: {
                 top: 0,
@@ -306,16 +310,16 @@
                 //设置自定义范围区域的颜色！！！
                 pieces: [
                     // 不指定 max，表示 max 为无限大（Infinity）。
-                    { gte: 30, color: '#1e6823' },
-                    { gte: 20, lte: 29, color: '#44a340' },
-                    { gte: 10, lte: 19,  color: '#8cc665' },
-                    { lte: 9, color: '#d6e685' }],
+                    {gte: 30, color: '#451981'},
+                    {gte: 20, lte: 29, color: '#9e6cd8'},
+                    {gte: 10, lte: 19, color: '#ddb5ff'},
+                    {lte: 9, color: '#f7ebff'}],
             },
             calendar: {
-                top:60,
-                bottom:10,
-                left:35,
-                right:10,
+                top: 60,
+                bottom: 10,
+                left: 35,
+                right: 10,
                 cellSize: 20,
                 range: ['2022'],
                 //orient:'vertical',
@@ -323,19 +327,19 @@
                     show: false
                 },
                 itemStyle: {
-                    color:'#ededed',
-                    borderColor:'#ffffff',
+                    color: '#ededed',
+                    borderColor: '#ffffff',
                 },
-                dayLabel:{
-                    nameMap:['', '一', '', '三', '', '五', '']
+                dayLabel: {
+                    nameMap: ['', '一', '', '三', '', '五', '']
                 },
-                monthLabel:{
-                    align:'left',
-                    position:'start',
+                monthLabel: {
+                    align: 'left',
+                    position: 'start',
                     nameMap: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
                 },
-                yearLabel:{
-                    show:false
+                yearLabel: {
+                    show: false
                 }
             },
             series: {
