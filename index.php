@@ -306,7 +306,7 @@
                     { lte: 9, color: '#d6e685' }],
             },
             calendar: {
-                top:30,
+                top:60,
                 bottom:10,
                 left:35,
                 right:10,
