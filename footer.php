@@ -72,7 +72,7 @@
     }
 
     function initBootTab() {
-        var firstTabEl = document.querySelector('#myTab li:last-child a');
+        var firstTabEl = document.querySelector('#myTab li:first-child a');
         var firstTab = new bootstrap.Tab(firstTabEl);
         firstTab.show()
     }
