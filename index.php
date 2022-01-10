@@ -214,6 +214,7 @@
     $(document).ready(function () {
         initSlider();
         initWindowWithListener();
+        initCalendarChart();
     });
 
     function initWindowWithListener() {
