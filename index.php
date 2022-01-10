@@ -271,16 +271,12 @@
             var end = +echarts.number.parseDate(year + '-12-31');
             var dayTime = 3600 * 24 * 1000;
             var data = [];
-            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-01-01'),2]);
-            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-02-01'),10]);
-            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-03-01'),3]);
-            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-04-01'),8]);
-            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-04-15'),13]);
-            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-05-15'),25]);
-            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-06-15'),20]);
-            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-07-15'),3]);
-            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-08-15'),6]);
-            data.push([echarts.format.formatTime('yyyy-MM-dd', '2022-09-15'),18]);
+            for (var time = date; time < end; time += dayTime) {
+                data.push([
+                    echarts.format.formatTime('yyyy-MM-dd', time),
+                    Math.floor(Math.random() * 100)
+                ]);
+            }
 
             return data;
         }
