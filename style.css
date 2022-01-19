@@ -13,6 +13,7 @@ Tags: tclazz、future、modern
 @import "tclazz-framework/css/swipper.css";
 @import "tclazz-framework/css/footer.css";
 @import "tclazz-framework/css/indexBanner.css";
+@import "tclazz-framework/css/blog.css";
 body {
     background-color: var(--app-bg);
 }

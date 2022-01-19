@@ -12,6 +12,168 @@
     </div>
 </div>
 <div class="container-lg">
+    <div class="row row-cols-xl-4 row-cols-lg-4 row-cols-md-2 row-cols-sm-2 row-cols-1 g-2">
+        <div class="col">
+            <div class="blogCard">
+                <div class="blogPoster">
+                    <img src="https://img0.baidu.com/it/u=4028483354,4272923931&fm=253&fmt=auto&app=138&f=JPEG?w=760&h=389"
+                         alt="blogPoster">
+                </div>
+                <div class="blogCardBody">
+                    <div class="blogTitle">
+                        <span>This is Content Title</span>
+                    </div>
+                    <div class="blogDesc">
+                        <span>This is Content Summary</span>
+                    </div>
+                    <div class="blogMetas">
+                        <span>TClazz</span>
+                        <span>2022-01-19</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="blogCard">
+                <div class="blogPoster">
+                    <img src="https://img0.baidu.com/it/u=4028483354,4272923931&fm=253&fmt=auto&app=138&f=JPEG?w=760&h=389"
+                         alt="blogPoster">
+                </div>
+                <div class="blogCardBody">
+                    <div class="blogTitle">
+                        <span>This is Content Title</span>
+                    </div>
+                    <div class="blogDesc">
+                        <span>This is Content Summary</span>
+                    </div>
+                    <div class="blogMetas">
+                        <span>TClazz</span>
+                        <span>2022-01-19</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="blogCard">
+                <div class="blogPoster">
+                    <img src="https://img0.baidu.com/it/u=4028483354,4272923931&fm=253&fmt=auto&app=138&f=JPEG?w=760&h=389"
+                         alt="blogPoster">
+                </div>
+                <div class="blogCardBody">
+                    <div class="blogTitle">
+                        <span>This is Content Title</span>
+                    </div>
+                    <div class="blogDesc">
+                        <span>This is Content Summary</span>
+                    </div>
+                    <div class="blogMetas">
+                        <span>TClazz</span>
+                        <span>2022-01-19</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="blogCard">
+                <div class="blogPoster">
+                    <img src="https://img0.baidu.com/it/u=4028483354,4272923931&fm=253&fmt=auto&app=138&f=JPEG?w=760&h=389"
+                         alt="blogPoster">
+                </div>
+                <div class="blogCardBody">
+                    <div class="blogTitle">
+                        <span>This is Content Title</span>
+                    </div>
+                    <div class="blogDesc">
+                        <span>This is Content Summary</span>
+                    </div>
+                    <div class="blogMetas">
+                        <span>TClazz</span>
+                        <span>2022-01-19</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="blogCard">
+                <div class="blogPoster">
+                    <img src="https://img0.baidu.com/it/u=4028483354,4272923931&fm=253&fmt=auto&app=138&f=JPEG?w=760&h=389"
+                         alt="blogPoster">
+                </div>
+                <div class="blogCardBody">
+                    <div class="blogTitle">
+                        <span>This is Content Title</span>
+                    </div>
+                    <div class="blogDesc">
+                        <span>This is Content Summary</span>
+                    </div>
+                    <div class="blogMetas">
+                        <span>TClazz</span>
+                        <span>2022-01-19</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="blogCard">
+                <div class="blogPoster">
+                    <img src="https://img0.baidu.com/it/u=4028483354,4272923931&fm=253&fmt=auto&app=138&f=JPEG?w=760&h=389"
+                         alt="blogPoster">
+                </div>
+                <div class="blogCardBody">
+                    <div class="blogTitle">
+                        <span>This is Content Title</span>
+                    </div>
+                    <div class="blogDesc">
+                        <span>This is Content Summary</span>
+                    </div>
+                    <div class="blogMetas">
+                        <span>TClazz</span>
+                        <span>2022-01-19</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="blogCard">
+                <div class="blogPoster">
+                    <img src="https://img0.baidu.com/it/u=4028483354,4272923931&fm=253&fmt=auto&app=138&f=JPEG?w=760&h=389"
+                         alt="blogPoster">
+                </div>
+                <div class="blogCardBody">
+                    <div class="blogTitle">
+                        <span>This is Content Title</span>
+                    </div>
+                    <div class="blogDesc">
+                        <span>This is Content Summary</span>
+                    </div>
+                    <div class="blogMetas">
+                        <span>TClazz</span>
+                        <span>2022-01-19</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="blogCard">
+                <div class="blogPoster">
+                    <img src="https://img0.baidu.com/it/u=4028483354,4272923931&fm=253&fmt=auto&app=138&f=JPEG?w=760&h=389"
+                         alt="blogPoster">
+                </div>
+                <div class="blogCardBody">
+                    <div class="blogTitle">
+                        <span>This is Content Title</span>
+                    </div>
+                    <div class="blogDesc">
+                        <span>This is Content Summary</span>
+                    </div>
+                    <div class="blogMetas">
+                        <span>TClazz</span>
+                        <span>2022-01-19</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row g-2">
         <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
             <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1 g-3" style="margin-top: 3px">
