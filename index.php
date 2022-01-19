@@ -16,6 +16,33 @@
         <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
             <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1 g-3" style="margin-top: 3px">
             <div class="col">
+                    <div class="slideTabbar">
+                        <div class="swiper-wrapper" style="width: 100%">
+                            <div class="swiper-slide">
+                                <div class="slideTabItem active">全部</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slideTabItem">Docker</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slideTabItem">Java</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slideTabItem">后端开发</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slideTabItem">前端开发</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slideTabItem">Devops</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slideTabItem">运维攻城狮</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="col">
                     <div class="tCalendarWrapper">
                         <div class="tCalendar">
                             <div class="tYear">
@@ -268,6 +295,7 @@
     let myCalendarChart = undefined;
     $(document).ready(function () {
         initSlider();
+        initSlideTabbar();
         initWindowWithListener();
         initCalendarChart();
     });
@@ -281,7 +309,20 @@
             resizeCalendarChart();
         });
     }
-
+    function initSlideTabbar() {
+        var mySlideTab = new Swiper('.slideTabbar', {
+            direction: 'horizontal', // 垂直切换选项
+            loop: false, // 循环模式选项
+            autoplay: false,
+           /* // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },*/
+            slidesPerView: 8,
+            slidesPerGroup: 8,
+        })
+    }
     function initSlider() {
         let windowWidth = $(window).width();
         let slideCount = 3;
